@@ -17,7 +17,11 @@ while (continueShopping) {
     item = prompt("Please enter a valid item name:");
   }
   let price = Number(prompt("What is the price of this item?"));
-  while (typeof price !== "number" || price.toString().length === 0 || price === NaN) {
+  while (
+    typeof price !== "number" ||
+    price.toString().length === 0 ||
+    price === NaN
+  ) {
     price = Number(prompt("Please enter a valid price:"));
   }
 
@@ -36,4 +40,4 @@ for (let i = 0; i < shoppingListItem.length; i++) {
     `   ${shoppingListItem[i]} - £${shoppingListItemPrice[i].toFixed(2)}`
   );
 }
-console.log("The amount you have to pay is: £" + totalPrice);
+console.log("The amount you have to pay is: £" + totalPrice.toFixed(2));
